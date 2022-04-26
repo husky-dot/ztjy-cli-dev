@@ -21,5 +21,9 @@
   },
   "dependencies": {
     "@ztjy-cli-dev/utils": "^1.0.2"
+  },
+  "gitHead": "b3485beb3817f91f23fdff9be43f82299dca4172",
+  "publishConfig": {
+    "access": "public"
   }
 }
