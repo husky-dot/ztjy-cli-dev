@@ -1,6 +1,6 @@
 {
   "name": "@ztjy-cli-dev/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ztjy-cli-dev core",
   "author": "qq449245884 <449245884@qq.com>",
   "homepage": "",
@@ -17,6 +17,6 @@
     "test": "echo \"Error: run tests from root\""
   },
   "dependencies": {
-    "@ztjy-cli-dev/utils": "^1.0.0"
+    "@ztjy-cli-dev/utils": "^1.0.1"
   }
 }
