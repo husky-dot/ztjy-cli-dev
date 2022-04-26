@@ -1,0 +1,22 @@
+{
+  "name": "@ztjy-cli-dev/core",
+  "version": "1.0.0",
+  "description": "ztjy-cli-dev core",
+  "author": "qq449245884 <449245884@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\""
+  },
+  "dependencies": {
+    "@ztjy-cli-dev/utils": "^1.0.0"
+  }
+}
