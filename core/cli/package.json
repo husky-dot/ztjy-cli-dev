@@ -5,7 +5,7 @@
   "author": "qq449245884 <449245884@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/core.js",
+  "main": "lib/index.js",
   "bin": {
     "ztjy-cli-dev": "bin/index.js"
   },
@@ -20,7 +20,16 @@
     "test": "echo \"Error: run tests from root\""
   },
   "dependencies": {
-    "@ztjy-cli-dev/utils": "^1.0.6"
+    "@ztjy-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@ztjy-cli-dev/log": "file:../../utils/log",
+    "@ztjy-cli-dev/init": "file:../../commands/init",
+    "colors": "^1.4.0",
+    "commander": "^9.2.0",
+    "dotenv": "^16.0.0",
+    "import-local": "^3.1.0",
+    "npmlog": "^6.0.2",
+    "root-check": "^1.0.0",
+    "semver": "^7.3.7"
   },
   "gitHead": "b3485beb3817f91f23fdff9be43f82299dca4172",
   "publishConfig": {
