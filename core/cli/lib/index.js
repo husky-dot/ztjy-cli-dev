@@ -7,7 +7,7 @@ const pkg = require('../package.json')
 const pathExists = require('path-exists').sync
 const log = require('@ztjy-cli-dev/log')
 const commander = require('commander')
-const init = require('@ztjy-cli-dev/init')
+const exec = require('@ztjy-cli-dev/exec')
 
 const constant = require('./const')
 const homedir = require('os').homedir()
@@ -22,6 +22,9 @@ async function core() {
     registerCommander()
   } catch (e) {
     log.error(e.message)
+    if (program.opts().debug) {
+      console.log(e)
+    }
   }
 }
 
@@ -36,7 +39,7 @@ function registerCommander() {
   program
     .command('init [projectName]')
     .option('-f, --force', '是否强制初始化项目')
-    .action(init)
+    .action(exec)
   // 开启 debug 模式  
   program.on('option:debug', function () {
     if (program.opts().debug) {
@@ -60,7 +63,6 @@ function registerCommander() {
 
 async function prepare() {
   checkPkgVersion()
-  checkNodeVersion()
   checkRoot()
   checkEnv()
   await checkGlobalUpdate()
@@ -123,17 +125,6 @@ function checkRoot() {
   rootCheck()
 }
 
-function checkNodeVersion() {
-  // 第一步，获取当前 Node 版本号
-  const currentVersion = process.version
-  // 第二步，比对最低版本号
-  const lowestNodeVersion = constant.LOWEST_NODE_VERSION
-  if (!semver.gte(currentVersion, lowestNodeVersion)) {
-    throw new Error(
-      colors.red(`ztjy-clc 需要安装 v${lowestNodeVersion} 以上的版本的 Node.js`)
-    )
-  }
-}
 
 function checkPkgVersion() {
   log.info('cli', pkg.version)

@@ -1,7 +1,7 @@
 {
-  "name": "@ztjy-cli-dev/init",
+  "name": "@ztjy-cli-dev/command",
   "version": "1.0.0",
-  "description": "init",
+  "description": "command",
   "author": "qq449245884 <449245884@qq.com>",
   "homepage": "https://github.com/qq449245884/ztjy-cli-dev#readme",
   "license": "ISC",
@@ -27,7 +27,8 @@
     "url": "https://github.com/qq449245884/ztjy-cli-dev/issues"
   },
   "dependencies": {
-    "@ztjy-cli-dev/command": "file:../../models/command",
+    "colors": "^1.4.0",
+    "semver": "^7.3.7",
     "@ztjy-cli-dev/log": "file:../../utils/log"
   }
 }

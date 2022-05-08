@@ -1,7 +1,7 @@
 {
-  "name": "@ztjy-cli-dev/init",
+  "name": "@ztjy-cli-dev/package",
   "version": "1.0.0",
-  "description": "init",
+  "description": "package",
   "author": "qq449245884 <449245884@qq.com>",
   "homepage": "https://github.com/qq449245884/ztjy-cli-dev#readme",
   "license": "ISC",
@@ -27,7 +27,12 @@
     "url": "https://github.com/qq449245884/ztjy-cli-dev/issues"
   },
   "dependencies": {
-    "@ztjy-cli-dev/command": "file:../../models/command",
-    "@ztjy-cli-dev/log": "file:../../utils/log"
+    "@ztjy-cli-dev/format-path": "file:../../utils/format-path",
+    "@ztjy-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@ztjy-cli-dev/utils": "file:../../utils/utils",
+    "fs-extra": "^10.1.0",
+    "npminstall": "^6.1.0",
+    "path-exists": "^4.0.0",
+    "pkg-dir": "^5.0.0"
   }
 }
